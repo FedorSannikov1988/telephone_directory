@@ -46,7 +46,7 @@ user_interface ->
 
 search_data ->
 
-proba_pera ->
+proba_pera -> отработка "кусков" кода
 
 print_data ->
 
