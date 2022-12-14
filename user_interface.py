@@ -22,7 +22,7 @@ def work_phone_directory():
             case 4:
                 data = del_rep_rec.delet_repeat_data(data)
             case 5:
-                print("еще не написали ожитется в ближайшее время")
+                work_phone_submenu()
             case 6:
                 data = l_s_d.loading_data_from_phone_directory()
             case 7:
@@ -37,3 +37,20 @@ def work_phone_directory():
                     action_user.choosing_action_for_safe())
                 print("данные сохранены")
                 return True
+
+def work_phone_submenu():
+
+    data = l_s_d.loading_data_from_phone_directory()
+    data_from_search = search_data.search_data_from_list(data) 
+    while True:
+        action = action_user.choosing_action_submenu()
+        match action:
+            case 1:
+                data_from_search = search_data.search_data_from_list(data)     
+            case 2:
+                print_data.print_all_list_in_terminal(data)
+            case 3:
+                data = delete_data.delet_data_from_serch_list(data, data_from_search)
+            case 4:
+                l_s_d.safe_data_in_phone_directory(del_rep_rec.delet_repeat_data(data))
+                work_phone_directory()
