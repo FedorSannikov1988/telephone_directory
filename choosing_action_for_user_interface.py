@@ -6,18 +6,19 @@ def choosing_start_work_action():
     print("\t Выберите действие:")
     print("\t 1 -  просмотреть все записи в справочнике")
     print("\t 2 -  добавить запись в справочник")
-    print("\t 3 -  удалить запис(-и)(-ь) из справочника")
-    print("\t 4 -  удалить повторяющиеся записи")
-    print("\t 5 -  найти запись в справочнике")
-    print("\t 6 -  загрузить данные (данные загруженные")
+    print("\t 3 -  изменить запись в справочнике")
+    print("\t 4 -  удалить запис(-и)(-ь) из справочника")
+    print("\t 5 -  удалить повторяющиеся записи")
+    print("\t 6 -  найти запись в справочнике")
+    print("\t 7 -  загрузить данные (данные загруженные")
     print("\t      ранее будут утеряны)")
-    print("\t 7 -  сохранить данные в формате: line")
-    print("\t 8 -  сохранить данные в формате: column")
-    print("\t 9 -  выйти из справочника без сохранения")
-    print("\t      изминений и удаления повторов")
+    print("\t 8 -  сохранить данные в формате: line")
+    print("\t 9 -  сохранить данные в формате: column")
+    print("\t 10 -  выйти из справочника без сохранения")
+    print("\t      изменений и удаления повторов")
     print("\t      в телефонной книге")
-    print("\t 10 - выйти из справочника с сохранением")
-    print("\t      изминений в телефонной книге")
+    print("\t 11 - выйти из справочника с сохранением")
+    print("\t      изменений в телефонной книге")
     print("\t","-"*41)
     print("\t Примечание к пункту 10:")
     print("\t При выходе из справочника данные автоматически сохраняются.")
@@ -29,7 +30,7 @@ def choosing_start_work_action():
     while True:
         human_answer_string = input(f"Какое действие выбираете: ")
         
-        if not human_answer_string.isdigit() or int(human_answer_string) > 10 or int(human_answer_string) < 1 :
+        if not human_answer_string.isdigit() or int(human_answer_string) > 11 or int(human_answer_string) < 1 :
             print("Повторите ввод действия")
             continue
 
@@ -41,6 +42,33 @@ def choosing_start_work_action():
             continue
     
     return human_answer_namber
+
+def choosing_action_submenu():
+    print("\n")
+    print("\t","*"*41)
+    print("\t Выберите действие:")
+    print("\t 1 -  повторить поиск")
+    print("\t 2 -  изменить запись в справочнике")
+    print("\t 3 -  удалить запис(-и)(-ь) из справочника")
+    print("\t 4 -  вернуться в основное меню")  
+    print("") 
+    
+    while True:
+        human_answer_string = input(f"Какое действие выбираете: ")
+        
+        if not human_answer_string.isdigit() or int(human_answer_string) > 4 or int(human_answer_string) < 1 :
+            print("Повторите ввод действия")
+            continue
+
+        try:
+            human_answer_namber = int(human_answer_string)
+            break
+        except ValueError:
+            print("Повторите ввод действия")
+            continue
+
+    return human_answer_namber   
+
 
 def choosing_action_for_safe():
 
