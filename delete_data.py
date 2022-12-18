@@ -18,7 +18,6 @@ def delet_data_from_list(data: list):
     
     function = lambda x: x <= len(data)
     human_answer_namber = list(filter(function, human_answer_namber))
-    #print(human_answer_namber)
 
     data_out = []
     
@@ -56,15 +55,3 @@ def delet_data_from_serch_list(data: list, data_from_search: list):
         data.remove(el)
     
     return data
-
-
-
-'''
-data = [["Фамилию", "Имя", "Отчество", 8900000000], ["Фамилию", "Имя", "Отчество", 8900000000], ["Фамилию", "Имя", "Отчество", 8900000000], ["Фамилию", "Имя", "Отчество", 8900000000]]
-
-print_data.print_all_list_in_terminal(data)
-
-data1 = delet_data_from_list(data)
-
-print_data.print_all_list_in_terminal(data1)
-'''
