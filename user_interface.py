@@ -72,4 +72,3 @@ def work_phone_submenu_exit(data):
                 return False
             case 4:
                 return True
-         

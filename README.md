@@ -37,28 +37,30 @@
     Федор Санников (тимлид) -> https://gb.ru/users/7817038
     ***
     
-    Анастасия ->
+    Анастасия -> https://gb.ru/users/7802944
     ***
 
 Структура приложения (описание функций модулей):
 
-user_interface -> 
+user_interface -> выполнение выбранного действия
 
-search_data ->
+search_data -> поиск данных в справочнике 
 
 proba_pera -> отработка "кусков" кода
 
-print_data ->
+print_data -> формат вывода данных из справочника
 
-main ->
+main -> запуск программы
 
-load_and_safe_data ->
+load_and_safe_data -> функции загрузки и сохранения данных
 
-delete_data ->
+delete_data -> удаление выбранных строк из справочника
 
-choosing_action_for_user_interface ->
+choosing_action_for_user_interface -> выбор действия со справочником
 
-add_data ->
+add_data -> добавление данных в справочник
+
+change_data -> замена выбранной строки из справочника
 
 
 Как запустить проект
