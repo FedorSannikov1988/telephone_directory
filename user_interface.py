@@ -30,28 +30,24 @@ def work_phone_directory():
             case 7:
                 data = l_s_d.loading_data_from_phone_directory()
             case 8:
-                flag_exit = work_phone_submenu_exit(data)
-        # if flag_exit == False: 
-        #     break        
-
+                if work_phone_submenu_exit(data) == False:
+                    break
 
 def work_phone_submenu(data):
-    # data_from_search =  print_data.print_all_list_in_terminal(\
-    #                 search_data.search_data_from_list(\
-    #                     data, add_data.input_data_in_phone_directory()))
-    data_from_search = search_data.search_data_from_list(data) 
+    data_from_search = search_data.search_data_from_list(data, add_data.input_data_in_phone_directory()) 
+    print_data.print_all_list_in_terminal(data_from_search)
+ 
     while True:
         action_submenu = action_user.choosing_action_submenu()
         match action_submenu:
+            
             case 1:
-                data_from_search = search_data.search_data_from_list(data)
-                # data_from_search = print_data.print_all_list_in_terminal(\
-                #     search_data.search_data_from_list(\
-                #         data, add_data.input_data_in_phone_directory()))
+                data_from_search = search_data.search_data_from_list(data, add_data.input_data_in_phone_directory()) 
+                print_data.print_all_list_in_terminal(data_from_search)
                      
             case 2:
-                change_data.change_data_in_telephone_directory(data, data_from_search)
-                
+                data = change_data.change_data_in_telephone_directory(data, data_from_search)
+
             case 3:
                 data = delete_data.delet_data_from_serch_list(data, data_from_search)
                 
