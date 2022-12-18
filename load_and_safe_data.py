@@ -1,16 +1,5 @@
 from pathlib import Path
 import print_data
-'''
-импортировал import print_data для 
-того что бы проверять что беру из файла
-'''
-
-'''
-Тяжеловесно конешно но зато я смог написать очень быстро 
-данный модуль хотя конешно применение такого 
-количесва for (особенно в модуле loading_data_from_phone_directory())
-не оправдано (можно куда изящнее)
-'''
 
 file_name = "phone_directory.csv"
 relative_file_directory = Path(file_name)
@@ -76,15 +65,3 @@ def loading_data_from_phone_directory() -> list:
                 count_for_element +=4
             return resalt_data
 
-'''
-это для проверки работоспособности кода:
-'''
-
-'''
-data_for_write = [["Фамилия1", "Имя1*", "Отчество1", 89609752504], ["Фамилия2", "Имя2*", "Отчество2", 89609752504], ["Фамилию3", "Имя3*", "Отчество3", 89609752504]]
-#flag = "line"
-flag = "column"
-safe_data_in_phone_directory(data_for_write, flag)
-data = loading_data_from_phone_directory()
-print_data.print_all_list_in_terminal(data)
-'''

@@ -1,3 +1,4 @@
+import validation
 def choosing_start_work_action():
 
     print("\n")
@@ -5,43 +6,17 @@ def choosing_start_work_action():
     print("\t","*"*41)
     print("\t Выберите действие:")
     print("\t 1 -  просмотреть все записи в справочнике")
-    print("\t 2 -  добавить запись в справочник")
-    print("\t 3 -  изменить запись в справочнике")
+    print("\t 2 -  отсортировать записи в справочнике")
+    print("\t 3 -  добавить запись в справочник")
     print("\t 4 -  удалить запис(-и)(-ь) из справочника")
     print("\t 5 -  удалить повторяющиеся записи")
     print("\t 6 -  найти запись в справочнике")
     print("\t 7 -  загрузить данные (данные загруженные")
     print("\t      ранее будут утеряны)")
-    print("\t 8 -  сохранить данные в формате: line")
-    print("\t 9 -  сохранить данные в формате: column")
-    print("\t 10 -  выйти из справочника без сохранения")
-    print("\t      изменений и удаления повторов")
-    print("\t      в телефонной книге")
-    print("\t 11 - выйти из справочника с сохранением")
-    print("\t      изменений в телефонной книге")
-    print("\t","-"*41)
-    print("\t Примечание к пункту 10:")
-    print("\t При выходе из справочника данные автоматически сохраняются.")
-    print("\t Пользователю предоставляеся выбор в каком формате line или")
-    print("\t column данные будут сохранены. Так же происходит удаление")
-    print("\t повторяющихся записей.")
+    print("\t 8 -  выход")
     print("")
-
-    while True:
-        human_answer_string = input(f"Какое действие выбираете: ")
-        
-        if not human_answer_string.isdigit() or int(human_answer_string) > 11 or int(human_answer_string) < 1 :
-            print("Повторите ввод действия")
-            continue
-
-        try:
-            human_answer_namber = int(human_answer_string)
-            break
-        except ValueError:
-            print("Повторите ввод действия")
-            continue
     
-    return human_answer_namber
+    return validation.validation_answer_number(1, 8)
 
 def choosing_action_submenu():
     print("\n")
@@ -52,23 +27,20 @@ def choosing_action_submenu():
     print("\t 3 -  удалить запис(-и)(-ь) из справочника")
     print("\t 4 -  вернуться в основное меню")  
     print("") 
-    
-    while True:
-        human_answer_string = input(f"Какое действие выбираете: ")
-        
-        if not human_answer_string.isdigit() or int(human_answer_string) > 4 or int(human_answer_string) < 1 :
-            print("Повторите ввод действия")
-            continue
 
-        try:
-            human_answer_namber = int(human_answer_string)
-            break
-        except ValueError:
-            print("Повторите ввод действия")
-            continue
+    return validation.validation_answer_number(1, 4)   
 
-    return human_answer_namber   
+def choosing_action_submenu_exit():
+    print("\n")
+    print("\t","*"*41)
+    print("\t Выберите действие:")
+    print("\t 1 -  выйти и сохранить из справочника в формате: line")
+    print("\t 2 -  выйти и сохранить из справочника в формате: line")
+    print("\t 3 -  выйти без сохоанения")
+    print("\t 4 -  вернуться в основное меню")  
+    print("") 
 
+    return validation.validation_answer_number(1, 4)  
 
 def choosing_action_for_safe():
 
@@ -93,23 +65,11 @@ def choosing_action_for_safe():
     print("\t Фамилия1;Имя1;Отчество1;Телефон1")
     print("\t Фамилия2;Имя2;Отчество2;Телефон2")
 
-    while True:
-        human_answer_string = input(f"Какое действие выбираете: ")
-        
-        if not human_answer_string.isdigit() or int(human_answer_string) > 2 or int(human_answer_string) < 1 :
-            print("Повторите ввод действия")
-            continue
-
-        try:
-            human_answer_namber = int(human_answer_string)
-            break
-        except ValueError:
-            print("Повторите ввод действия")
-            continue
+    human_answer_number = validation.validation_answer_number(1,2)
     
-    if human_answer_namber == 1:
+    if human_answer_number == 1:
         flag_for_format_safe_data = "column"
-    elif human_answer_namber == 2:
+    elif human_answer_number == 2:
         flag_for_format_safe_data = "line"
 
     return flag_for_format_safe_data

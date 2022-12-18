@@ -4,13 +4,13 @@ def input_data_in_phone_directory() -> list:
     
     resalt_human_answer = list()
     
-    requested_data = ("фамилию", "имя", "отчество", "номер тефена")
+    requested_data = ("фамилию", "имя", "отчество", "номер телефона")
     
     while True:
         
         human_answer_string = input(f"Введите {requested_data[count]}: ")
         
-        if count >= 3 and not human_answer_string.isdigit() and not human_answer_string == '':
+        if count >= 3 and not human_answer_string.isdigit() and not human_answer_string == "":
             print("Повторите ввод телефонного номера")
             continue
 
