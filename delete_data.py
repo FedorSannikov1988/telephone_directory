@@ -1,4 +1,4 @@
-import print_data
+import logger
 
 def delet_data_from_list(data: list):
     
@@ -23,7 +23,7 @@ def delet_data_from_list(data: list):
     
     for count in range(0, len(data), 1):
         if human_answer_namber.count(int(count+1)) == 0:
-            data_out.append(data[count]) 
+            data_out.append(data[count])
     
     return data_out
 

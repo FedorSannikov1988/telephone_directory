@@ -19,9 +19,9 @@ def input_data_in_phone_directory() -> list:
         except ValueError:
             print("Повторите ввод")
             continue
-        else:
-            resalt_human_answer.append(data)
-            count +=1
-            if count == 4: break
+
+        resalt_human_answer.append(data)
+        count +=1
+        if count == 4: break
     
     return resalt_human_answer

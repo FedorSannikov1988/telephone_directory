@@ -34,9 +34,9 @@ def choosing_action_submenu_exit():
     print("\n")
     print("\t","*"*41)
     print("\t Выберите действие:")
-    print("\t 1 -  выйти и сохранить из справочника в формате: line")
-    print("\t 2 -  выйти и сохранить из справочника в формате: line")
-    print("\t 3 -  выйти без сохоанения")
+    print("\t 1 -  выйти из справочника и сохранить в формате: line")
+    print("\t 2 -  выйти из справочника и сохранить в формате: column")
+    print("\t 3 -  выйти без сохранения")
     print("\t 4 -  вернуться в основное меню")  
     print("") 
 
@@ -65,7 +65,7 @@ def choosing_action_for_safe():
     print("\t Фамилия1;Имя1;Отчество1;Телефон1")
     print("\t Фамилия2;Имя2;Отчество2;Телефон2")
 
-    human_answer_number = validation.validation_answer_number(1,2)
+    human_answer_number = validation.validation_answer_number(1, 2)
     
     if human_answer_number == 1:
         flag_for_format_safe_data = "column"
