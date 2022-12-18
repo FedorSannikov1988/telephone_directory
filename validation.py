@@ -14,4 +14,3 @@ def validation_answer_number(min_number: int, max_number: int):
             continue
     
     return human_answer_number
- 
