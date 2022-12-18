@@ -4,7 +4,7 @@ def input_data_in_phone_directory() -> list:
     
     resalt_human_answer = list()
     
-    requested_data = ("фамилию", "имя", "отчество", "номер тефена")
+    requested_data = ("фамилию", "имя", "отчество", "номер телефона")
     
     while True:
         
