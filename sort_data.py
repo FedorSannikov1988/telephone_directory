@@ -1,7 +1,6 @@
 import validation
 
 def sorting_data(data: list):
-
     
     print("\n")
     print("\t\t   СОРТИРОВАТЬ ЗАПИСИ ПО")
@@ -31,13 +30,3 @@ def sorting_data(data: list):
     data_result = sorted(data, key = lambda el: el[0], reverse=flag_sort_order)
 
     return data_result
-
-
-
-# data = [["Фамилия1", "Имя1", "Отчество1", 123], ["qw", "Имя1", "r", 123], ["Амилия3", "Имя2", "Отчество2", 123], \
-#     ["Фамилию3", "Имя3", "Отчество3", 123], ["qwe", "Имя5", "rr", 236], ["Фамилия1", "Имя1", "Отчество1", 123], \
-#         ["Фамилию5", "Имя5", "Отчество5", 123], ["Фамилию6", "Имя6", "Отчество6", 123], ["qw45", "Имя1", "r", 16623], ["awe78", "Имя5", "rr", 23556]]
-
-# sorted(data)
-# print(sorted(data, key = lambda el: el[3], reverse=True))
-
